@@ -1,0 +1,7 @@
+
+# Ignore dependencies (should be installed via package.json)
+node_modules/
+
+# Ignore build and cache files
+artifacts/
+cache/
