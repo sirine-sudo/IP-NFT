@@ -28,7 +28,7 @@ async function uploadMetadata() {
       },
     });
 
-    console.log("✅ Métadonnées uploadées avec succès :", res.data);
+    console.log(" Métadonnées uploadées avec succès :", res.data);
     return res.data.IpfsHash;
   } catch (error) {
     console.error("❌ Erreur lors de l'upload sur Pinata :", error);
