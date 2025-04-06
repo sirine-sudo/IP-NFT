@@ -38,13 +38,7 @@ contract MyNFT is ERC721URIStorage, ERC2981, Ownable {
 
     // Fonction pour mettre à jour les métadonnées d'un NFT (ex : nouvelle image, nouveau contenu)
     function updateMetadata(uint256 tokenId, string memory newUri) public {
-        // Autorisation : uniquement le propriétaire ou une personne approuvée peut modifier
-        require(
-            _msgSender() == ownerOf(tokenId) ||
-            getApproved(tokenId) == _msgSender() ||
-            isApprovedForAll(ownerOf(tokenId), _msgSender()),
-            "Not authorized"
-        );
+  
 
         _setTokenURI(tokenId, newUri); // Mise à jour de l'URI (lien vers les nouvelles métadonnées)
 
